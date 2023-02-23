@@ -1,0 +1,6 @@
+[submodule "nastyjoke"]
+	path = nastyjoke
+	url = git@github.com:jmau111-org/nastyjoke.git
+[submodule "godebian"]
+	path = godebian
+	url = git@github.com:jmau111-org/godebian.git

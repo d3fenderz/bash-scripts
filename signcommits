@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+trap 'echo -e "\033[31mScript failed with an unexpected error!\033[0m" >&2; exit 1' ERR
+
+function usage() {
+    cat 1>&2 <<EOF
+USAGE:
+    ./signcommits [ EMAIL ] [ /PATH/TO/KEY_PUB ]
+EOF
+}
+
+if [ "$#" -ne 2 ]; then
+    usage
+    exit 1
+fi
+
+if [ ! -f "$2" ]; then
+    echo -e "\e[1;31m $2 does not exist. \033[0m"
+    exit 1
+fi
+
+email=$1
+key=$2 # /path/to/.ssh/key.pub
+key_content=$(cat $key)
+
+touch ~/.ssh/allowed_signers
+echo $email $key_content > ~/.ssh/allowed_signers
+git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
+git config --global commit.gpgsign true
+git config --global gpg.format ssh
+git config --global user.signingkey $key
+
+ls -alh ~/.ssh

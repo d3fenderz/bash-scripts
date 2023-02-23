@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+trap 'echo -e "\033[31mScript failed with an unexpected error!\033[0m" >&2; exit 1' ERR
+
+if ! [ -x "$(command -v exiftool)" ]; then
+  echo -e "\e[1;31mError: exiftool is not installed.\033[0m" >&2
+  exit 1
+fi
+
+for file in "$@"
+do
+  exiftool -all= "$file" # clean ALL EXIF data (a bit radical!)
+  touch -am $file # reset both creation and modification date
+done

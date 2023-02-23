@@ -26,13 +26,13 @@ sudo su
 ### FileCleaner
 
 ```
-./filecleaner [ FILE_1 ] [ FILE_2 ] [ FILE_n ]
+./file_cleaner [ FILE_1 ] [ FILE_2 ] [ FILE_n ]
 ```
 
 Alternatively, you can pass wildcards:
 
 ```
-./filecleaner *.jpg
+./file_cleaner *.jpg
 ```
 
 ## How to use submodules

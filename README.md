@@ -31,3 +31,13 @@ Alternatively, you can pass wildcards:
 
 ./filecleaner *.jpg
 ```
+
+## How to use submodules
+
+You may need the following command if it's your first clone of the project:
+
+```
+git submodule update --init --recursive
+```
+
+Otherwise, you may download each script one by one.

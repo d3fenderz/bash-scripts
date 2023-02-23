@@ -1,6 +1,6 @@
 # Bash Scripts (J.)
 
-## How to (when it's not clear)
+## How to
 
 It's better to make those scripts executable with `chmod +x [ SCRIPT ]` and then execute them like that:
 
@@ -13,6 +13,8 @@ Alternatively, you may use:
 ```
 bash [ SCRIPT ]
 ```
+
+Here are additional instructions for specific scripts:
 
 ### ProcDDoS
 

@@ -40,7 +40,7 @@ Alternatively, you can pass wildcards:
 You may need the following command if it's your first clone of the project:
 
 ```
-git clone git@github.com:jmau111-org/bash-scripts.git
+git clone git@github.com:jmau111-org/bash-scripts.git && cd bash-scripts
 git submodule update --init --recursive
 ```
 

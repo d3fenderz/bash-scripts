@@ -27,8 +27,11 @@ sudo su
 
 ```
 ./filecleaner [ FILE_1 ] [ FILE_2 ] [ FILE_n ]
+```
+
 Alternatively, you can pass wildcards:
 
+```
 ./filecleaner *.jpg
 ```
 

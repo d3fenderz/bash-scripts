@@ -20,7 +20,7 @@ Here are additional instructions for specific scripts:
 
 ```
 sudo su
-./procddos
+./proc_ddos
 ```
 
 ### FileCleaner

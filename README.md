@@ -1,4 +1,4 @@
-# Bash Script (J.)
+# Bash Scripts (J.)
 
 ## How to (when it's not clear)
 
